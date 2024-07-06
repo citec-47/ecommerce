@@ -1,0 +1,27 @@
+Banner.css
+
+/* General Banner Styles */
+.banner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+  }
+  
+  /* Hide banners on mobile devices */
+  @media (max-width: 768px) {
+    .banner {
+      display: none;
+    }
+  }
+  
