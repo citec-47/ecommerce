@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Navbar.css';
 import logo from '../Assets/logo.png';
 import cart_icon from '../Assets/cart_icon.png';
 import { Link } from 'react-router-dom';
+import { ShopContext } from '../../Contex/ShopContex';
 
 const Navbar = () => {
   const [menu, setMenu] = useState("Shop");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const {getTotalCartItems} = useContext(ShopContext);
 
   const handleMenuClick = (menuName) => {
     setMenu(menuName);
@@ -41,7 +44,7 @@ const Navbar = () => {
         <Link to='/login'><button>Login</button></Link>
         <div className="cart-container">
           <Link to='/cart'><img src={cart_icon} alt="cart-icon" /></Link>
-          <div className="nav-cart-count">0</div>
+          <div className="nav-cart-count">{getTotalCartItems()}</div>
         </div>
       </div>
       <div className="hamburger" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
