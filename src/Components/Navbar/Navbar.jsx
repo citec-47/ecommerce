@@ -17,7 +17,7 @@ const Navbar = () => {
     <div className='navbar'>
       <div className="nav-logo">
         <img src={logo} alt="logo" />
-        <p>SHOPPER</p>
+        <p>ECOM-NMD</p>
       </div>
       <ul className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <li onClick={() => handleMenuClick("shop")}>
@@ -39,8 +39,10 @@ const Navbar = () => {
       </ul>
       <div className='nav-login-cart'>
         <Link to='/login'><button>Login</button></Link>
-        <Link to='/cart'><img src={cart_icon} alt="cart-icon" /></Link>
-        <div className="nav-cart-count">0</div>
+        <div className="cart-container">
+          <Link to='/cart'><img src={cart_icon} alt="cart-icon" /></Link>
+          <div className="nav-cart-count">0</div>
+        </div>
       </div>
       <div className="hamburger" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
         <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
