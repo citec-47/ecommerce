@@ -47,7 +47,7 @@ const CartsItem = () => {
                         <hr />
                         <div className="cartoterms-total-items">
                             <p>Shipping Fee</p>
-                            <p>Free</p>
+                            <p>Fee</p>
                         </div>
                         <hr />
                         <div className="cartoterms-total-items">
