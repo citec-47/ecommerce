@@ -1,16 +1,34 @@
 const port = 4000;
 const express = require("express");
 const app = express();
-const mongoose = requre("mongoose");
-const jwt = require ("jsdwebtoken");
-const  multer = requre ("multer");
-const path  = requre ("path");
-const core = requre ("cors");
+const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken");
+const multer = require("multer");
+const path = require("path");
+const cors = require("cors");
 
-app.use (express.json());
-app.use (core());
+app.use(express.json());
+app.use(cors());
 
-//Database connection with MongoDb
-mongoose.connect("mongodb+srv://ndonyi:ndonyi1@cluster0.pmoytxv.mongodb.net/ecommerce");
+// Database connection with MongoDB
+mongoose.connect("mongodb+srv://ndonyi:ndonyi@cluster0.hlkzsyc.mongodb.net/ ", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => {
+    console.log("Connected to MongoDB");
+}).catch((error) => {
+    console.error("Error connecting to MongoDB: ", error);
+});
 
-//API CREATION
+// API creation
+app.get("/", (req, res) => {
+    res.send("Express App is running");
+});
+
+app.listen(port, (error) => {
+    if (!error) {
+        console.log("Server is running on port " + port);
+    } else {
+        console.log("Error: " + error);
+    }
+});
