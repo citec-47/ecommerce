@@ -12,3 +12,5 @@ app.use (core());
 
 //Database connection with MongoDb
 mongoose.connect("mongodb+srv://ndonyi:ndonyi1@cluster0.pmoytxv.mongodb.net/ecommerce");
+
+//API CREATION
