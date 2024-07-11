@@ -181,7 +181,7 @@
 
 @media (max-width: 480px) {
     .cartitems-format-main {
-        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         gap: 2px;
         font-size: 12px;
     }
