@@ -1,12 +1,13 @@
 .add-product{
     box-sizing: border-box;
     width: 100%;
-    max-width: 800PX;
-    padding: 30PX 50PX;
-    margin: 20PX 30PX;
-    border-radius: 6PX;
+    max-width: 800px;
+    padding: 30px 50px;
+    margin: 20px 30px;
+    border-radius: 6px;
     background: white;
 }
+
 .addproduct-itemfield{
     width: 100%;
     color: #7b7b7b;
